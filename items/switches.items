@@ -1,0 +1,1 @@
+Switch Dining_Switch "Dining room light" (GF_Dining) {zwave="2:command=switch_binary"}

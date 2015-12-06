@@ -1,0 +1,4 @@
+sitemap condor_in_culver label="The Condo in Culver"
+{
+	Switch item=Dining_Switch label="Toggle Switch"
+}
