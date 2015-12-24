@@ -1,0 +1,11 @@
+Group sensor "Sensors" (ALL)
+Group doors "Doors" (ALL)
+Group battery "Batteries" <battery> (ALL)
+
+Contact back_door_sensor    "Back door [%s]"                                         	(sensor,doors)      {zwave="3:command=basic,respond_to_basic=true"}
+Number  back_door_battery   "Back door battery [%d %%]"              <battery>       	(battery)           {zwave="3:command=battery"}
+
+Contact front_door_sensor   "Front door [%s]"                                       	(sensor,doors)      {zwave="5:command=basic,respond_to_basic=true"}
+Number  front_door_battery  "Front door battery [%d %%]"            <battery>       	(battery)           {zwave="5:command=battery"}
+
+Contact garage_door_sensor  "Garage door [MAP(en.map):%s]" 				(sensor,doors) 	    {zwave="6:command=sensor_binary"}
