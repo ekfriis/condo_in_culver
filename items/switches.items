@@ -1,2 +1,4 @@
 Dimmer Dining_Dimmer "Dining Dimmer [%d %%]" <slider> (GF_Dining) {zwave="4:command=switch_multilevel,refresh_interval=30"}
 Switch Dining_Switch "Dining Room" <light> (GF_Dining) {zwave="4:command=basic"}
+
+Switch Garage_Switch "Garage" <light> (GF_Dining) {zwave="2:command=switch_binary"}
