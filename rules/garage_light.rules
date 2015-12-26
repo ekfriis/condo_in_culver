@@ -1,0 +1,28 @@
+var Number counter = -1
+
+rule "garage light on when door opens"
+when
+	back_door_sensor changed from CLOSED to OPEN or
+	garage_door_sensor changed from CLOSED to OPEN
+then
+	counter = 0
+	logInfo("garage", "Door -> LightON")
+	sendCommand(Garage_Switch, ON)
+end
+
+rule "garage light off after 10 minutes"
+when 
+	Time cron "0 * * * * ?"
+then
+	if (counter > -1) {
+		counter = counter + 1
+		logInfo("garage", "tick")
+		if (counter == 10) {
+			logInfo("garage", "Door -> LightOff")
+			sendCommand(Garage_Switch, OFF)
+			counter = -1
+		}
+	}
+end
+	
+	
