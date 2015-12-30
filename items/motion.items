@@ -1,0 +1,16 @@
+Group motion "Motion" (ALL)
+Group top_stairs "Top of Stairs" (ALL)
+Group bottom_stairs "Top of Stairs" (ALL)
+Group climate "Climate" (ALL)
+
+Number top_stairs_temp "Top of Stairs Temperature [%.1f °F]" (top_stairs,climate,sensor) {zwave="8:command=sensor_multilevel,sensor_type=1"}
+Number top_stairs_humidity "Top of Stairs Humidity [%.0f %%]" (top_stairs,climate,sensor) {zwave="8:command=sensor_multilevel,sensor_type=5"}
+Number top_stairs_luminance "Top of Stairs Luminance [%.0f Lux]" (top_stairs,sensor) {zwave="8:command=sensor_multilevel,sensor_type=3"}
+Contact top_stairs_motion "Top of Stairs Motion [MAP(motion.map):%s]" (top_stairs,motion,sensor) {zwave="8:command=sensor_binary,respond_to_basic=true"}
+Number top_stairs_battery "Top of Stairs Battery [%s %%]" <battery> (top_stairs,battery) {zwave="8:command=battery"}
+
+Number bottom_stairs_temp "Bottom of Stairs Temperature [%.1f °F]" (bottom_stairs,climate,sensor)  {zwave="9:command=sensor_multilevel,sensor_type=1"}
+Number bottom_stairs_humidity "Bottom of Stairs Humidity [%.0f %%]" (bottom_stairs,climate,sensor) {zwave="9:command=sensor_multilevel,sensor_type=5"}
+Number bottom_stairs_luminance "Bottom of Stairs Luminance [%.0f Lux]" (bottom_stairs,sensor) {zwave="9:command=sensor_multilevel,sensor_type=3"}
+Contact bottom_stairs_motion "Bottom of Stairs Motion [MAP(motion.map):%s]" (bottom_stairs,motion,sensor) {zwave="9:command=sensor_binary,respond_to_basic=true"}
+Number bottom_stairs_battery "Bottom of Stairs Battery [%s %%]" <battery> (bottom_stairs,battery) {zwave="9:command=battery"}
