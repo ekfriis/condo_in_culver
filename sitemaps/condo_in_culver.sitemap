@@ -6,9 +6,9 @@ sitemap condor_in_culver label="The Condo in Culver"
 		Switch item=Garage_Switch 
 	}
 	Frame label="Climate" {
-		Setpoint item=NestTStat_target_temperature_f label="Target Temperature [%.1f °F]" minValue=50 maxValue=80 step=1
-		Text item=NestTStat_ambient_temperature_f 	
-		Text item=NestTStat_hvac_state 	
+		Setpoint item=nest_target_temperature_f label="Target Temperature [%.1f °F]" minValue=50 maxValue=80 step=1
+		Text item=nest_ambient_temperature_f 	
+		Text item=nest_hvac_state 	
 	}
 	Frame label="Debug" {
 		Group item=sensor

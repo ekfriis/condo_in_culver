@@ -1,7 +1,7 @@
 Group nest "Nest" (ALL)
 
-Switch   NestTStat_is_online "Is Online [%s]" 	(nest) {nest="<[thermostats(Downstairs).is_online]"}
-DateTime NestTStat_last_connection "Last Connection [%1$tm/%1$td/%1$tY %1$tH:%1$tM:%1$tS]" <calendar> (nest) {nest="<[thermostats(Downstairs).last_connection]"}
-String   NestTStat_hvac_state "HVAC State [%s]" (nest) {nest="<[thermostats(Downstairs).hvac_state]"}
-Number   NestTStat_ambient_temperature_f "Ambient Temperature [%.1f °F]"         (nest) {nest="<[thermostats(Downstairs).ambient_temperature_f]"}
-Number   NestTStat_target_temperature_f "Target Temperature [%.1f °F]"           (nest) {nest="=[thermostats(Downstairs).target_temperature_f]"}
+Switch   nest_is_online "Is Online [%s]" 	(nest) {nest="<[thermostats(Downstairs).is_online]"}
+DateTime nest_last_connection "Last Connection [%1$tm/%1$td/%1$tY %1$tH:%1$tM:%1$tS]" <calendar> (nest) {nest="<[thermostats(Downstairs).last_connection]"}
+String   nest_hvac_state "HVAC State [%s]" (nest) {nest="<[thermostats(Downstairs).hvac_state]"}
+Number   nest_ambient_temperature_f "Ambient Temperature [%.1f °F]"         (nest) {nest="<[thermostats(Downstairs).ambient_temperature_f]"}
+Number   nest_target_temperature_f "Target Temperature [%.1f °F]"           (nest) {nest="=[thermostats(Downstairs).target_temperature_f]"}
