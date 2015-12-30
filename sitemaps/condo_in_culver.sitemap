@@ -12,6 +12,7 @@ sitemap condor_in_culver label="The Condo in Culver"
 	}
 	Frame label="Debug" {
 		Group item=sensor
+		Group item=climate
 		Group item=nest
 		Group item=battery
 	}
