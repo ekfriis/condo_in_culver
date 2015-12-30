@@ -8,4 +8,7 @@ Number  back_door_battery   "Back door battery [%d %%]" <battery> (battery) {zwa
 Contact front_door_sensor   "Front door [MAP(en.map):%s]" (sensor,doors) {zwave="5:command=basic,respond_to_basic=true"}
 Number  front_door_battery  "Front door battery [%d %%]" <battery> (battery) {zwave="5:command=battery"}
 
-Contact garage_door_sensor  "Garage door [MAP(en.map):%s]" 				(sensor,doors) 	    {zwave="6:command=sensor_binary"}
+Contact garage_door_sensor  "Garage door [MAP(en.map):%s]" (sensor,doors) {zwave="6:command=sensor_binary"}
+
+Contact water_sensor         "Water sensor [MAP(waterSensor.map):%s]" (sensor) {zwave="7:command=BASIC"}
+Number  water_sensor_battery "Water sensor battery [%d %%]" (battery) {zwave="7:command=BATTERY"}
