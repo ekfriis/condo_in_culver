@@ -2,12 +2,19 @@ var Number counter = -1
 
 rule "garage light on when door opens"
 when
-	back_door_sensor changed from CLOSED to OPEN or
-	garage_door_sensor changed from CLOSED to OPEN
+	Item back_door_sensor changed from CLOSED to OPEN or
+	Item garage_door_sensor changed from CLOSED to OPEN
 then
-	counter = 0
-	logInfo("garage", "Door -> LightON")
+	logInfo("garage", "Door opened - turn light ON")
 	sendCommand(Garage_Switch, ON)
+end
+
+rule "turn off garage light after ten minutes"
+when
+	Item Garage_Switch received command ON
+then
+	logInfo("garage", "Light turned ON")
+	counter = 0
 end
 
 rule "garage light off after 10 minutes"
@@ -16,13 +23,11 @@ when
 then
 	if (counter > -1) {
 		counter = counter + 1
-		logInfo("garage", "tick")
+		logInfo("garage", "tick-tock")
 		if (counter == 10) {
-			logInfo("garage", "Door -> LightOff")
+			logInfo("garage", "Turning Light OFF")
 			sendCommand(Garage_Switch, OFF)
 			counter = -1
 		}
 	}
 end
-	
-	
