@@ -3,5 +3,6 @@ Group nest "Nest" (ALL)
 Switch   nest_is_online "Is Online [%s]" 	(nest) {nest="<[thermostats(Downstairs).is_online]"}
 DateTime nest_last_connection "Last Connection [%1$tm/%1$td/%1$tY %1$tH:%1$tM:%1$tS]" <calendar> (nest) {nest="<[thermostats(Downstairs).last_connection]"}
 String   nest_hvac_state "HVAC State [%s]" (nest) {nest="<[thermostats(Downstairs).hvac_state]"}
-Number   nest_ambient_temperature_f "Ambient Temperature [%.1f °F]"         (nest) {nest="<[thermostats(Downstairs).ambient_temperature_f]"}
+Number   nest_ambient_temperature_f "Ambient Temperature [%.1f °F]" (nest,climate) {nest="<[thermostats(Downstairs).ambient_temperature_f]"}
+Number   nest_ambient_humidity "Ambient Humidity [%.1f %%]"         (nest,climate) {nest="<[thermostats(Downstairs).humidity]"}
 Number   nest_target_temperature_f "Target Temperature [%.1f °F]"           (nest) {nest="=[thermostats(Downstairs).target_temperature_f]"}
