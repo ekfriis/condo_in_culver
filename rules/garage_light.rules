@@ -2,8 +2,8 @@ var Number counter = -1
 
 rule "garage light on when door opens"
 when
-	Item back_door_sensor changed from CLOSED to OPEN or
-	Item garage_door_sensor changed from CLOSED to OPEN
+	Item back_door_sensor changed to OPEN or
+	Item garage_door_sensor changed to OPEN
 then
 	logInfo("garage", "Door opened - turn light ON")
 	sendCommand(Garage_Switch, ON)
