@@ -1,8 +1,9 @@
 sitemap condor_in_culver label="The Condo in Culver"
 {
 	Frame label="Lights" {
-		Switch item=Dining_Switch
-		Slider item=Dining_Dimmer 
+		Slider item=dining_dimmer 
+		Slider item=living_dimmer 
+		Slider item=astrid_light 
 		Switch item=Garage_Switch 
 	}
 	Frame label="Climate" {

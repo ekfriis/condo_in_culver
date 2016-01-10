@@ -1,0 +1,1 @@
+Dimmer astrid_light "Astrid Light [%d %%]" <slider> (lights) {zwave="10:command=switch_multilevel,refresh_interval=30"}
