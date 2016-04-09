@@ -1,0 +1,6 @@
+rule "pendant lamp follows switch"
+when
+	Item living_dimmer changed
+then
+	sendCommand(astrid_light, living_dimmer.state.toString)
+end
